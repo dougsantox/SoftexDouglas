@@ -1,0 +1,87 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <algorithm>
+
+using namespace std;
+
+struct Aluno{
+    string nome;
+    float nota_1;
+    float nota_2;
+    int faltas;
+};
+
+void lerArquivo(vector<Aluno> &listaAlunos){
+    ifstream arquivo("notas_alunos.csv");
+
+    string linha;
+    while(getline(arquivo, linha)){
+        stringstream ss(linha);
+        string aluno;
+        float nota_1;
+        float nota_2;
+        int faltas;
+
+        getline(ss, aluno, ';');
+        ss >> nota_1;
+        ss.ignore();
+        ss >> nota_2;
+        ss.ignore();
+        ss >> faltas;
+
+        Aluno al;
+        al.nome = aluno;
+        al.nota_1 = nota_1;
+        al.nota_2 = nota_2;
+        al.faltas = faltas;
+
+        listaAlunos.push_back(al);
+    }
+}
+
+void gerarArquivo(vector<Aluno> &listaAlunos){
+    ofstream arquivo("alunos_situacao.csv");
+    arquivo << "aluno;media;situacao" << endl;
+
+    for(auto al : listaAlunos){
+        float media = (al.nota_1 + al.nota_2) / 2;
+        string situacao = (al.faltas > 5 || media < 7) ? "REPROVADO" : "APROVADO";
+        arquivo << al.nome << ";" << media << ";" << situacao << endl;
+    }
+
+    arquivo.close();
+}
+
+void mostrarDados(vector<Aluno> &listaAlunos){
+    int maiorFaltas = 0;
+    float somaNotas = 0;
+    float maiorMedia = 0;
+
+    for(auto al : listaAlunos){
+        if(al.faltas > maiorFaltas)
+            maiorFaltas = al.faltas;
+
+        float media = (al.nota_1 + al.nota_2) / 2;
+        somaNotas += media;
+
+        if(media > maiorMedia)
+            maiorMedia = media;
+    }
+
+    cout << "Maior numero de faltas: " << maiorFaltas << endl;
+    cout << "Media das notas: " << somaNotas/listaAlunos.size() << endl;
+    cout << "Maior media: " << maiorMedia << endl;
+}
+
+int main(){
+    vector<Aluno> listaAlunos;
+
+    lerArquivo(listaAlunos);
+    gerarArquivo(listaAlunos);
+    mostrarDados(listaAlunos);
+
+    return 0;
+}
