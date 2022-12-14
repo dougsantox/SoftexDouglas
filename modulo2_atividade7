@@ -1,0 +1,48 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int voto, candidatoX = 0, candidatoY = 0, candidatoZ = 0, branco = 0, nulo = 0;
+    char finalizar;
+
+    do {
+        printf("Digite o número do seu candidato: ");
+        scanf("%d", &voto);
+
+        if (voto == 889)
+            candidatoX++;
+        else if (voto == 847)
+            candidatoY++;
+        else if (voto == 515)
+            candidatoZ++;
+        else if (voto == 0)
+            branco++;
+        else {
+            printf("Voto inválido. Por favor, votar novamente.\n");
+            nulo++;
+        }
+
+        printf("Deseja finalizar a votação? (s/n) ");
+        scanf(" %c", &finalizar);
+
+    } while (finalizar != 's');
+
+    printf("\nResultado da votação:\n");
+    printf("Candidato X: %d votos\n", candidatoX);
+    printf("Candidato Y: %d votos\n", candidatoY);
+    printf("Candidato Z: %d votos\n", candidatoZ);
+    printf("Branco: %d votos\n", branco);
+    printf("Nulo: %d votos\n", nulo);
+
+    if (candidatoX > candidatoY && candidatoX > candidatoZ)
+        printf("Vencedor: Candidato X\n");
+    else if (candidatoY > candidatoX && candidatoY > candidatoZ)
+        printf("Vencedor: Candidato Y\n");
+    else if (candidatoZ > candidatoX && candidatoZ > candidatoY)
+        printf("Vencedor: Candidato Z\n");
+    else
+        printf("Empate\n");
+
+    return 0;
+}
