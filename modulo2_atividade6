@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    char nome[100];
+    int anoNascimento;
+    int anoAtual = 2022;
+    int idade;
+
+    printf("Informe o seu nome completo: ");
+    scanf("%[^\n]s", nome);
+
+    printf("Informe o seu ano de nascimento (entre 1922 e 2021): ");
+    scanf("%d", &anoNascimento);
+
+    while (anoNascimento < 1922 || anoNascimento > 2021) {
+        printf("Ano inválido. Por favor, digite um ano entre 1922 e 2021: ");
+        scanf("%d", &anoNascimento);
+    }
+
+    idade = anoAtual - anoNascimento;
+    printf("%s, você completará %d anos neste ano.\n", nome, idade);
+
+    return 0;
+}
