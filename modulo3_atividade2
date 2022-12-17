@@ -1,0 +1,19 @@
+// Método de ordenação Insertion Sort
+// Parâmetros: vetor de tamanho 30, números ímpares, ordem crescente
+
+public void insertionSort(int[] array) {
+  // Início da iteração do array
+  for (int i = 1; i < array.length; i++) {
+    int chave = array[i];
+    int j = i - 1;
+
+    // Verifica se o elemento atual é ímpar e se é menor que o elemento anterior
+    while (j > -1 && array[j] > chave && array[j] % 2 != 0) {
+      // Se for, troca os elementos de posição
+      array[j + 1] = array[j];
+      j--;
+    }
+    // Insere o elemento na posição correta
+    array[j + 1] = chave;
+  }
+}
