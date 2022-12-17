@@ -1,0 +1,7 @@
+Grafos são estruturas de dados do tipo não linear que representam relações entre objetos conectados por arestas. São usados em diversos contextos tecnológicos para representar relações entre entidades.
+
+Exemplos de uso de grafos no contexto tecnológico:
+
+1. Redes Sociais: as redes sociais podem ser representadas como grafos, onde cada usuário corresponde a um vértice e as conexões entre usuários são representadas por arestas.
+
+2. Sistemas de Recomendação: os sistemas de recomendação são baseados em grafos, onde os vértices representam os usuários e as arestas representam as conexões entre usuários e os conteúdos que eles já viram. Assim, é possível identificar quais usuários possuem gostos similares e fazer recomendações de conteúdos baseadas nestas relações.
