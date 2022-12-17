@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+    int i;
+    int *vetor = malloc(sizeof(int) * 22);
+
+    for(i = 0; i < 22; i++) {
+        vetor[i] = i;
+    }
+
+    vetor = realloc(vetor, sizeof(int) * 33);
+
+    for(i = 22; i < 33; i++) {
+        vetor[i] = i;
+    }
+
+    free(vetor);
+    return 0;
+}
