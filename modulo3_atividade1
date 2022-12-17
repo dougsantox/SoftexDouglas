@@ -1,0 +1,26 @@
+1. Inicie o vetor com os dez valores desejados;
+2. Para i variando de 0 a 9:
+  2.1 Para j variando de 0 a 8:
+    2.1.1 Se vetor[j] > vetor[j+1], então:
+      2.1.1.1 Trocar o valor de vetor[j] com o valor de vetor[j+1];
+3. Incrementar i;
+4. Repita os passos 2 e 3 até que não hajam mais trocas a serem feitas.
+
+Código em JavaScript:
+
+// Declaração do vetor
+let vetor = [4, 6, 9, 8, 5, 1, 3, 7, 0, 2];
+
+// Bubble Sort
+for (let i = 0; i < 10; i++) {
+  for (let j = 0; j < 9; j++) {
+    if (vetor[j] > vetor[j+1]) {
+      let aux = vetor[j];
+      vetor[j] = vetor[j+1];
+      vetor[j+1] = aux;
+    }
+  }
+}
+
+// Resultado final
+console.log(vetor); // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
