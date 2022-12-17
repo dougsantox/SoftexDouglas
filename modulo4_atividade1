@@ -1,0 +1,39 @@
+Objeto material 1: Carro
+Métodos:
+- Acelerar
+- Frear
+- Mudar de marcha
+Atributos:
+- Modelo
+- Cor
+- Ano
+
+Objeto material 2: Livro
+Métodos:
+- Abrir
+- Fechar
+- Folhear
+Atributos:
+- Título
+- Autor
+- Capa
+
+Objeto abstrato 1: Ideia
+Métodos:
+- Discutir
+- Desenvolver
+- Aplicar
+Atributos:
+- Originalidade
+- Consistência
+- Relevância
+
+Objeto abstrato 2: Valor
+Métodos:
+- Definir
+- Analisar
+- Comparar
+Atributos:
+- Justiça
+- Ética
+- Virtude
