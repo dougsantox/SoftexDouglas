@@ -1,0 +1,25 @@
+class Complexo:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+        
+    def calcular(self, num1, num2, num3):
+        self.num1 = num1
+        self.num2 = num2
+        self.num3 = num3
+        
+    def soma(self):
+        return self.num1 + self.num2 + self.num3
+    
+    def subtracao(self):
+        return self.num1 - self.num2 - self.num3
+    
+    def multiplicacao(self):
+        return self.num1 * self.num2 * self.num3
+    
+    def divisao(self):
+        return self.num1 / self.num2 / self.num3
+    
+    def propriedades(self):
+        print('Propriedades reais: %d, %d, %d' %(self.num1.real, self.num2.real, self.num3.real))
+        print('Propriedades imaginárias: %d, %d, %d' %(self.num1.img, self.num2.img, self.num3.img))
