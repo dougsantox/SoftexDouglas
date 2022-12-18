@@ -1,0 +1,24 @@
+class Carro {
+  // variável
+  let marca;
+
+  // método
+  fun drive() {
+  	console.log('Vrooom!');
+  }
+
+  // incremento
+  fun acelerar() {
+  	velocidade++;
+  }
+}
+
+// objetos
+let carro1 = new Carro();
+carro1.marca = 'Honda';
+
+let carro2 = new Carro();
+carro2.marca = 'Toyota';
+
+let carro3 = new Carro();
+carro3.marca = 'Ford';
