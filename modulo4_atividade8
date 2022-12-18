@@ -1,0 +1,17 @@
+O padrão de projeto Singleton é um padrão de projetos que garante que uma classe 
+terá apenas uma instância e fornecerá um ponto global de acesso a ela. Ele é útil 
+quando precisamos ter um objeto que deve ser compartilhado entre todos os outros objetos da aplicação.
+
+O Singleton consiste em duas partes: a classe singleton que implementa a lógica do padrão
+e uma variável global que referência a instância criada. A classe singleton tem um construtor
+privado para garantir que não seja possível criar instâncias de fora da classe. 
+Ela também tem um método estático que fornece acesso à instância única.
+
+O padrão Singleton é muito útil em situações onde precisamos compartilhar recursos e dados 
+entre diversos objetos sem precisar criar novas instâncias. Isso também pode ser útil para economizar memória,
+pois a instância única é compartilhada entre todos os objetos.
+
+Falando de padrões de criação eu prefiro o Singleton por ser mais prático.
+
+Também gosto do Model-View-Controller (MVC)que separa a lógica de apresentação de uma aplicação em três partes:
+1 modelo, 2 visão e 3 controlador. Isso torna mais fácil para os desenvolvedores criarem aplicativos mais complexos.
