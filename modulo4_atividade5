@@ -1,0 +1,33 @@
+Código 1
+
+def reverse_string(string):
+  reversed_string = ''
+  for char in string:
+    reversed_string = char + reversed_string
+  return reversed_string
+
+print(reverse_string("Codigo 1"))
+
+Código 2
+
+def replace_char(string, char1, char2):
+  replaced_string = ""
+  for char in string:
+    if char == char1:
+      replaced_string += char2
+    else:
+      replaced_string += char
+  return replaced_string
+
+print(replace_char("Codigo 2", "l", "x"))
+
+Código 3
+
+def remove_spaces(string):
+  no_spaces_string = ""
+  for char in string:
+    if char != " ":
+      no_spaces_string += char
+  return no_spaces_string
+
+print(remove_spaces("Codigo 3"))
