@@ -1,0 +1,47 @@
+Exemplo em Java:
+
+public class Conta {
+ 
+    private String nome;
+    private double saldo;
+ 
+    public Conta(String nome, double saldo) {
+        this.nome = nome;
+        this.saldo = saldo;
+    }
+ 
+    public String getNome() {
+        return nome;
+    }
+ 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+ 
+    public double getSaldo() {
+        return saldo;
+    }
+ 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+}
+
+Exemplo em Python:
+
+class Conta:
+    def __init__(self, nome, saldo):
+        self.nome = nome
+        self.saldo = saldo
+    
+    def get_nome(self):
+        return self.nome
+    
+    def set_nome(self, nome):
+        self.nome = nome
+    
+    def get_saldo(self):
+        return self.saldo
+    
+    def set_saldo(self, saldo):
+        self.saldo = saldo
