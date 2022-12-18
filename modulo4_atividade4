@@ -1,0 +1,61 @@
+Resumo:
+
+PACKAGE 1: GESTÃO DE RECURSOS HUMANOS
+
+Classes:
+- Empregado.java
+- Gerente.java
+- Departamento.java
+- Contrato.java
+- Salário.java
+- Benefícios.java
+
+PACKAGE 2: GESTÃO FINANCEIRA
+
+Classes:
+- Conta.java
+- Transação.java
+- Investimento.java
+- Relatório.java
+- Orçamento.java
+- Fluxo de Caixa.java
+
+Pacote 1:
+
+package com.empresa.gerenciamento;
+
+public class GerenciamentoUsuarios {
+    public void criarUsuario() {
+        //criar um novo usuário
+    }
+
+    public void atualizarUsuario() {
+        //atualizar um usuário existente
+    }
+}
+
+public class GerenciamentoPermissoes {
+    public void definirPermissoes() {
+        //definir as permissões de acesso
+    }
+}
+
+Pacote 2:
+
+package com.empresa.financeiro;
+
+public class ControleOrcamento {
+    public void calcularDespesas() {
+        //calcular as despesas da empresa
+    }
+
+    public void atualizarOrcamento() {
+        //atualizar o orçamento da empresa
+    }
+}
+
+public class GerenciarContas {
+    public void gerenciarPagamentos() {
+        //gerenciar os pagamentos da empresa
+    }
+}
